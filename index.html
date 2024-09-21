@@ -9,6 +9,9 @@
         .important-places{
             color: blueviolet
         }
+        .fruits-container li{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -24,7 +27,7 @@
             <li>Srijon</li>
         </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits i like</h1>
             <ul>
                 <li>Apple</li>
@@ -54,11 +57,24 @@
             console.log(h1.innerText)
         }
 
+        // option2
         const fruitsTitle = document.getElementById('fruits-title');
         fruitsTitle.innerText ='Fruits changed by JS';
+        // option-3
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
             console.log(place.innerText)
+        }
+
+        // option-4: querySelector
+        // return first one
+        
+        // option-5
+        // query selector all
+        const someLi = document.querySelectorAll('.fruits-container li');
+        console.log(someLi)
+        for(const li of someLi){
+            console.log(li.innerText);
         }
     </script>
 </body>
