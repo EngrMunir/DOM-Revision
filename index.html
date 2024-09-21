@@ -5,17 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <style>
+        .important-places{
+            color: blueviolet
+        }
+    </style>
 </head>
 <body>
     <header>welcome to my DOM</header>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quisquam, nesciunt ullam ipsa cum quo sunt repudiandae in unde iste expedita neque voluptate est libero alias exercitationem. Quod, ut dolorum?</p>
     <main>
-        <h1>My Awesome DOM de baba</h1>
+        <section>
+            <h1>My close friend</h1>
         <ul>
-            <li>Jalali mia</li>
+            <li>Arafat</li>
             <li>Sirajul</li>
             <li>Munir</li>
+            <li>Srijon</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits i like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+                <li>mango</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Places I like to visit</h1>
+            <ul>
+                <li class="important-places" >sondorbon</li>
+                <li class="important-places">katabon</li>
+                <li class="important-places">bandorban</li>
+                <li class="important-places">salbon</li>
+            </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(const li of liCollection){
+            console.log(li.innerText)
+        }
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            console.log(h1.innerText)
+        }
+
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText ='Fruits changed by JS';
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(place.innerText)
+        }
+    </script>
 </body>
 </html>
